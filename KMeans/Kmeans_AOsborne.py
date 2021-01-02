@@ -10,7 +10,7 @@
 #_________________________________________________________________________________________________________________________
 
 # Notes: 
-# Please install the the following packages with 'pip install'
+# Please install the following packages with 'pip install'
 # If a program doesn't want to bring me to the home path, in a terminal, say cd ~\OneDrive\Documents\
 
 from pathlib import Path
@@ -81,7 +81,6 @@ print(compressed_image)
 # [ 16  30   7]
 # [ 16  30   7]]
 
-#Reshape the image to original dimensions
 compressed_image = compressed_image.reshape(rows, cols, 3)
 
 #Save and display output image
