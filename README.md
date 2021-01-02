@@ -1,4 +1,6 @@
 # MachineLearning
  ML projects
 
-Initial Git test 20210102
+## KMeans
+
+Initial Machine Learning Project from January 2, 2021.
