@@ -11,6 +11,9 @@
 
 # Notes: 
 # Please install the following packages with 'pip install'
+# pip install numpy pandas seaborn matplotlib scikit-image sklearn mlxtend termcolor datetime
+
+
 # If a program doesn't want to bring me to the home path, in a terminal, say cd ~\OneDrive\Documents\
 
 from pathlib import Path
@@ -18,8 +21,11 @@ from skimage import io
 from sklearn.cluster import KMeans
 from termcolor import colored
 import numpy as np
+import datetime
 
 print(colored('==============================START OF PROGRAM=========================================================', 'yellow'))
+# mystart stores current time 
+mystart = datetime.datetime.now() 
 
 # Note: Run this from a directory where image is located. 
 file_to_open = "Palm.png"
@@ -103,3 +109,10 @@ print(cols)
 # The size is reduced. Original image was 16, 110 KB in PNG format. With 8 clusters, it became 1,776 KB. With 4 clusters, 893 KB. 
 
 print(colored('================================END OF PROGRAM=========================================================', 'yellow'))
+
+# myend stores current time 
+myend = datetime.datetime.now()
+rmystart = mystart - datetime.timedelta(microseconds=mystart.microsecond)
+rmyend = myend - datetime.timedelta(microseconds=myend.microsecond)
+print("Program Started:-", rmystart) 
+print("Program Ended:-", rmyend) 

@@ -12,6 +12,8 @@
 
 # Notes: 
 # Please install the following packages with 'pip install'
+# pip install numpy pandas seaborn matplotlib sklearn mlxtend termcolor datetime
+
 # If a program doesn't want to bring me to the home path, in a terminal, say cd ~\OneDrive\Documents\
 # From Visual Studio Code terminal, I can hold Ctrl+Shift+P and "tclear" anytime to refresh the space and delete all no longer needed text in a terminal.  
 
@@ -19,6 +21,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import datetime
 
 from sklearn import metrics
 from mlxtend.plotting import scatterplotmatrix
@@ -27,6 +30,8 @@ from sklearn.metrics import mean_squared_error, r2_score
 from termcolor import colored
 
 print(colored('==============================START OF PROGRAM=========================================================', 'yellow'))
+# mystart stores current time 
+mystart = datetime.datetime.now() 
 
 #url = "https://github.com/huzaifsayed/Linear-Regression-Model-for-House-Price-Prediction/blob/master/USA_Housing.csv"
 #df1 = pd.read_csv(url)
@@ -171,3 +176,9 @@ print('Coefficient of determination: %.2f'
 
 print(colored('================================END OF PROGRAM=========================================================', 'yellow'))
 
+# myend stores current time 
+myend = datetime.datetime.now()
+rmystart = mystart - datetime.timedelta(microseconds=mystart.microsecond)
+rmyend = myend - datetime.timedelta(microseconds=myend.microsecond)
+print("Program Started:-", rmystart) 
+print("Program Ended:-", rmyend) 
